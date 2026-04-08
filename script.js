@@ -71,7 +71,8 @@ orderForm.addEventListener("submit", async (event) => {
     return;
   }
 
-  if (Number(quantity) <= 0) {
+  const qtyValue = Number(quantity);
+  if (!Number.isInteger(qtyValue) || qtyValue <= 0) {
     status.textContent = "Quantity must be greater than zero.";
     status.style.color = "#d32f2f";
     return;
@@ -82,7 +83,7 @@ orderForm.addEventListener("submit", async (event) => {
       name,
       phone,
       product,
-      quantity: Number(quantity)
+      quantity: qtyValue
     });
     status.textContent = `Order saved for ${product}. We will call you shortly.`;
     status.style.color = "#2e7d32";

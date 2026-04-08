@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-analytics.js";
+import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-analytics.js";
 import {
   getFirestore,
   addDoc,
@@ -19,8 +19,17 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const db = getFirestore(app);
+let analytics = null;
+
+// Analytics may be unavailable in some browsers/contexts.
+try {
+  if (await isSupported()) {
+    analytics = getAnalytics(app);
+  }
+} catch (error) {
+  console.warn("Firebase Analytics not initialized:", error);
+}
 
 export async function saveContact(data) {
   return addDoc(collection(db, "contacts"), {
