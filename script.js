@@ -85,7 +85,7 @@ orderForm.addEventListener("submit", async (event) => {
       product,
       quantity: qtyValue
     });
-    status.textContent = `Order saved for ${product}. We will call you shortly.`;
+    status.textContent = `Order saved for ${product} (${qtyValue} kg). Please confirm by calling 9898856557 and tell your order details.`;
     status.style.color = "#2e7d32";
     orderForm.reset();
   } catch (error) {
