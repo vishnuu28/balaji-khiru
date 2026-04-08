@@ -3,8 +3,7 @@ import { getAnalytics, isSupported } from "https://www.gstatic.com/firebasejs/10
 import {
   getFirestore,
   addDoc,
-  collection,
-  serverTimestamp
+  collection
 } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
 
@@ -28,14 +27,14 @@ try {
 export async function saveContact(data) {
   return addDoc(collection(db, "contacts"), {
     ...data,
-    createdAt: serverTimestamp()
+    createdAt: Date.now()
   });
 }
 
 export async function saveOrder(data) {
   return addDoc(collection(db, "orders"), {
     ...data,
-    createdAt: serverTimestamp()
+    createdAt: Date.now()
   });
 }
 

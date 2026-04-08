@@ -14,7 +14,10 @@ service cloud.firestore {
         request.resource.data.message is string &&
         request.resource.data.message.size() >= 3 &&
         request.resource.data.message.size() <= 1000 &&
-        request.resource.data.createdAt is timestamp;
+        (
+          request.resource.data.createdAt is timestamp ||
+          request.resource.data.createdAt is int
+        );
       allow read, update, delete: if false;
     }
 
@@ -31,7 +34,10 @@ service cloud.firestore {
         request.resource.data.quantity is int &&
         request.resource.data.quantity > 0 &&
         request.resource.data.quantity <= 500 &&
-        request.resource.data.createdAt is timestamp;
+        (
+          request.resource.data.createdAt is timestamp ||
+          request.resource.data.createdAt is int
+        );
       allow read, update, delete: if false;
     }
 

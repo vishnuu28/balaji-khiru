@@ -46,7 +46,7 @@ contactForm.addEventListener("submit", async (event) => {
     contactForm.reset();
   } catch (error) {
     console.error(error);
-    status.textContent = "Could not save your message. Please try again.";
+    status.textContent = `Could not save your message: ${error.code || "unknown-error"}`;
     status.style.color = "#d32f2f";
   }
 });
@@ -90,7 +90,7 @@ orderForm.addEventListener("submit", async (event) => {
     orderForm.reset();
   } catch (error) {
     console.error(error);
-    status.textContent = "Could not save your order. Please try again.";
+    status.textContent = `Could not save your order: ${error.code || "unknown-error"}`;
     status.style.color = "#d32f2f";
   }
 });
