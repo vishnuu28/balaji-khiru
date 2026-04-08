@@ -34,6 +34,8 @@ h2 { font-size: clamp(1.6rem, 1.4rem + 1vw, 2.2rem); margin-bottom: 16px; }
 .badge { display: inline-block; background: #ffe8d1; color: #9a4d08; padding: 6px 12px; border-radius: 999px; font-size: .85rem; margin-bottom: 12px; }
 .hero h1 { font-size: clamp(2rem, 1.6rem + 2vw, 3rem); margin-bottom: 16px; }
 .hero p { margin-bottom: 20px; color: var(--text-muted); }
+.hero-hook { font-weight: 600; color: var(--secondary); margin-bottom: 10px; font-size: 1.02rem; }
+.hero-tagline { color: var(--text-muted); font-size: 0.98rem; margin-bottom: 20px; font-style: italic; border-left: 3px solid var(--primary); padding-left: 12px; }
 .btn { display: inline-block; padding: 11px 20px; border-radius: 10px; font-weight: 600; transition: transform .2s ease, background-color .3s ease; }
 .btn:hover { transform: translateY(-2px); }
 .btn-primary { background: var(--primary); color: var(--white); border: none; cursor: pointer; }

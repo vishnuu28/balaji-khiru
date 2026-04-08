@@ -1,170 +1,409 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khiru Foods | Fresh Batter Delivered Daily</title>
-  <meta name="description" content="Khiru Foods supplies fresh, homemade Idli, Dosa, and Vada batter daily to local customers and stores." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="header">
-    <nav class="navbar container">
-      <a href="#home" class="logo" aria-label="Balaji Khiru home">
-        <span class="logo-mark" aria-hidden="true">🛕</span>
-        <span class="logo-text">
-          <strong>Balaji Khiru</strong>
-          <small>Online Order Site</small>
-        </span>
-      </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#why-choose-us">Why Us</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#order">Order</a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khiru Foods | Fresh Batter Delivered Daily</title>
+    <meta
+      name="description"
+      content="Khiru Foods supplies fresh, homemade Idli, Dosa, and Vada batter daily to local customers and stores."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar container">
+        <a href="#home" class="logo" aria-label="Balaji Khiru home">
+          <span class="logo-mark" aria-hidden="true">🛕</span>
+          <span class="logo-text">
+            <strong>Balaji Khiru</strong>
+            <small>Online Order Site</small>
+          </span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          ☰
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#why-choose-us">Why Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#order">Order</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <section id="home" class="hero section">
-      <div class="container hero-content">
-        <div class="hero-text">
-          <p class="badge">Homemade • Fresh • Hygienic</p>
-          <h1>Fresh Batter Delivered Daily</h1>
-          <p>Welcome to <strong>Khiru Foods</strong> — trusted homemade Idli, Dosa, and Vada batter for local families and shop owners across our area in India.</p>
-          <a href="#order" class="btn btn-primary">Order Now</a>
-        </div>
-        <div class="hero-image">
-          <img src="https://images.pexels.com/photos/35351659/pexels-photo-35351659.jpeg?_gl=1*mb6u6n*_ga*MTg4NzA2Mjc5NS4xNzc1NjgxNTI0*_ga_8JE65Q40S6*czE3NzU2ODE1MjQkbzEkZzAkdDE3NzU2ODE1MjQkajYwJGwwJGgw" alt="Fresh khiru batter and South Indian breakfast" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Masala_dosa_1.jpg';" />
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About Us</h2>
-        <p class="section-intro">Khiru Foods is a family-run business started by my father with one simple goal: serve clean, high-quality, homemade batter that people can trust every day.</p>
-        <div class="about-grid">
-          <div class="card"><h3>Our Story</h3><p>What began as small daily preparation at home has grown into a reliable local supply service for homes and nearby stores.</p></div>
-          <div class="card"><h3>Our Promise</h3><p>Every batch is made with care, fresh ingredients, and proper hygiene so your meals are always soft, tasty, and healthy.</p></div>
-          <div class="card"><h3>Local Trust</h3><p>We are proud to support local families and shopkeepers with consistent quality and timely delivery.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="products" class="section section-alt">
-      <div class="container">
-        <h2>Our Products</h2>
-        <p class="section-intro">Freshly prepared batter options for daily use and store supply.</p>
-        <div class="card" style="margin-bottom: 20px;">
-          <h3>Pricing & Order Information</h3>
-          <p><strong>Regular Price:</strong> 1 kg khiru batter = <strong>Rs. 50</strong>.</p>
-          <p><strong>Marriage / Event Orders:</strong> Please place your order at least <strong>1 week before</strong> delivery.</p>
-          <p><strong>Large Quantity Orders:</strong> Price may differ based on quantity and delivery requirement.</p>
-          <p><strong>Large Order Contact:</strong> For large quantity orders, please contact us on WhatsApp.</p>
-          <p><strong>Home Delivery Policy:</strong> Home delivery is applicable only if your khiru order is more than <strong>10 kg</strong>.</p>
-          <p><strong>Confirmation:</strong> Inform us on WhatsApp or by calling after placing your order.</p>
-        </div>
-        <div class="products-grid">
-          <article class="product-card">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Idli_%26_Vada.jpg" alt="Idli served on plate" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Idli_Sambar.JPG';" />
-            <div class="product-content"><h3>Idli Batter</h3><p>Soft, fermented, and ready-to-cook batter for fluffy idlis. Perfect for healthy breakfast and tiffin.</p></div>
-          </article>
-          <article class="product-card">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Masala_dosa_01.jpg" alt="Crispy dosa with chutney" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Masala_dosa_1.jpg';" />
-            <div class="product-content"><h3>Dosa Batter</h3><p>Smooth and balanced batter for crispy, golden dosas. Great taste with easy cooking at home or in shops.</p></div>
-          </article>
-          <article class="product-card">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Medu_Vadas.JPG" alt="Fresh medu vada made from urad batter" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Uzhunnu_Vada_(%E0%B4%89%E0%B4%B4%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B5%8D_%E0%B4%B5%E0%B4%9F).jpg';" />
-            <div class="product-content"><h3>Vada Batter</h3><p>Freshly ground urad batter for crispy and soft vadas. Ideal for tea-time snacks and events.</p></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="why-choose-us" class="section">
-      <div class="container">
-        <h2>Why Choose Us</h2>
-        <div class="features-grid">
-          <div class="feature-card"><h3>Fresh Daily</h3><p>Prepared every day to maintain freshness, taste, and quality.</p></div>
-          <div class="feature-card"><h3>Hygienic Preparation</h3><p>Made in a clean environment with strict attention to food safety.</p></div>
-          <div class="feature-card"><h3>Trusted by Local Stores</h3><p>Many nearby shopkeepers rely on us for regular batter supply.</p></div>
-          <div class="feature-card"><h3>Affordable Pricing</h3><p>Fair rates for families and wholesale-friendly pricing for stores.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section section-alt">
-      <div class="container two-col">
-        <div>
-          <h2>Contact Us</h2>
-          <p class="section-intro">Reach us directly for daily orders, store supply, and delivery inquiries.</p>
-          <ul class="contact-list">
-            <li><strong>Phone:</strong> <a href="tel:+919898856557">+91 98988 56557</a></li>
-            <li><strong>WhatsApp 1:</strong> <a class="whatsapp-link" href="https://wa.me/918013042517" target="_blank" rel="noopener">Chat on WhatsApp (8013042517)</a></li>
-            <li><strong>WhatsApp 2:</strong> <a class="whatsapp-link" href="https://wa.me/919898856557" target="_blank" rel="noopener">Chat on WhatsApp (9898856557)</a></li>
-            <li><strong>Location:</strong> India (Local Delivery Area)</li>
-          </ul>
-        </div>
-        <form id="contactForm" class="form-card" novalidate>
-          <h3>Quick Contact Form</h3>
-          <label for="contactName">Name</label>
-          <input id="contactName" name="name" type="text" placeholder="Your name" required />
-          <label for="contactPhone">Phone</label>
-          <input id="contactPhone" name="phone" type="tel" placeholder="10-digit phone number" required />
-          <label for="contactMessage">Message</label>
-          <textarea id="contactMessage" name="message" rows="4" placeholder="Your message" required></textarea>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-          <p class="form-status" id="contactStatus"></p>
-        </form>
-      </div>
-    </section>
-
-    <section id="order" class="section">
-      <div class="container">
-        <h2>Place an Order</h2>
-        <p class="section-intro">Fill this form to place your order. <strong>After ordering, please confirm your order by calling</strong> <a href="tel:+919898856557"><strong>9898856557</strong></a> and tell us what you ordered (product + quantity).</p>
-        <p class="section-intro"><strong>Important:</strong> Regular price is <strong>Rs. 50 per 1 kg</strong>. For marriage or other big event orders, please order at least <strong>1 week in advance</strong>. For larger quantity orders, khiru price may vary. Please contact us on WhatsApp for large orders. Home delivery is applicable only if your khiru order is above <strong>10 kg</strong>. Please confirm your details by WhatsApp or phone call.</p>
-        <form id="orderForm" class="form-card order-form" novalidate>
-          <div class="form-grid">
-            <div><label for="orderName">Name</label><input id="orderName" name="name" type="text" placeholder="Your full name" required /></div>
-            <div><label for="orderPhone">Phone</label><input id="orderPhone" name="phone" type="tel" placeholder="10-digit phone number" required /></div>
-            <div>
-              <label for="orderProduct">Product</label>
-              <select id="orderProduct" name="product" required>
-                <option value="">Select product</option>
-                <option value="Idli Batter">Idli Batter</option>
-                <option value="Dosa Batter">Dosa Batter</option>
-                <option value="Vada Batter">Vada Batter</option>
-              </select>
-            </div>
-            <div><label for="orderQuantity">Quantity (kg)</label><input id="orderQuantity" name="quantity" type="number" min="1" step="1" placeholder="e.g. 2" required /></div>
+    <main>
+      <section id="home" class="hero section">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <p class="badge">Homemade • Fresh • Hygienic</p>
+            <h1>Fresh Batter Delivered Daily</h1>
+            <p>
+              Welcome to <strong>Khiru Foods</strong> — trusted homemade Idli,
+              Dosa, and Vada batter for local families and shop owners across
+              our area in India.
+            </p>
+            <p class="hero-hook">
+              Made by a pure South Indian family — tradition you can taste in
+              every bite.
+            </p>
+            <p class="hero-tagline">
+              Crispy dosa tomorrow morning? Order fresh khiru today — your
+              breakfast deserves the real thing.
+            </p>
+            <a href="#order" class="btn btn-primary">Order Now</a>
           </div>
-          <button type="submit" class="btn btn-primary">Submit Order</button>
-          <p class="form-status" id="orderStatus"></p>
-        </form>
-      </div>
-    </section>
-  </main>
+          <div class="hero-image">
+            <img
+              src="https://images.pexels.com/photos/35351659/pexels-photo-35351659.jpeg?_gl=1*mb6u6n*_ga*MTg4NzA2Mjc5NS4xNzc1NjgxNTI0*_ga_8JE65Q40S6*czE3NzU2ODE1MjQkbzEkZzAkdDE3NzU2ODE1MjQkajYwJGwwJGgw"
+              alt="Fresh khiru batter and South Indian breakfast"
+              loading="lazy"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://commons.wikimedia.org/wiki/Special:FilePath/Masala_dosa_1.jpg';
+              "
+            />
+          </div>
+        </div>
+      </section>
 
-  <footer class="footer">
-    <div class="container footer-content">
-      <p>© 2026 Khiru Foods. Fresh homemade batter for your family and business.</p>
-      <div class="social-links">
-        <a href="https://wa.me/919898856557" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="#" aria-label="Instagram profile">Instagram</a>
-        <a href="#" aria-label="Facebook page">Facebook</a>
-      </div>
-    </div>
-  </footer>
+      <section id="about" class="section">
+        <div class="container">
+          <h2>About Us</h2>
+          <p class="section-intro">
+            Balaji Khiru is run by a <strong>pure South Indian family</strong> —
+            we grew up with idli, dosa, and vada on the table. My father started
+            this with one goal: serve clean, high-quality, homemade batter you
+            can trust every day. That same home-kitchen honesty is what we bring
+            to Valsad.
+          </p>
+          <div class="about-grid">
+            <div class="card">
+              <h3>Our Story</h3>
+              <p>
+                What began as small daily preparation at home has grown into a
+                reliable local supply service for homes and nearby stores.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Our Promise</h3>
+              <p>
+                Every batch is made with care, fresh ingredients, and proper
+                hygiene so your meals are always soft, tasty, and healthy.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Local Trust</h3>
+              <p>
+                We are proud to support local families and shopkeepers with
+                consistent quality and timely delivery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <script type="module" src="script.js"></script>
-</body>
+      <section id="products" class="section section-alt">
+        <div class="container">
+          <h2>Our Products</h2>
+          <p class="section-intro">
+            Freshly prepared batter options for daily use and store supply.
+          </p>
+          <div class="card" style="margin-bottom: 20px">
+            <h3>Pricing & Order Information</h3>
+            <p>
+              <strong>Regular Price:</strong> 1 kg khiru batter =
+              <strong>Rs. 50</strong>.
+            </p>
+            <p>
+              <strong>Marriage / Event Orders:</strong> Please place your order
+              at least <strong>1 week before</strong> delivery.
+            </p>
+            <p>
+              <strong>Large Quantity Orders:</strong> Price may differ based on
+              quantity and delivery requirement.
+            </p>
+            <p>
+              <strong>Large Order Contact:</strong> For large quantity orders,
+              please contact us on WhatsApp.
+            </p>
+            <p>
+              <strong>Home Delivery Policy:</strong> Home delivery is applicable
+              only if your khiru order is more than <strong>10 kg</strong>.
+            </p>
+            <p>
+              <strong>Confirmation:</strong> Inform us on WhatsApp or by calling
+              after placing your order.
+            </p>
+          </div>
+          <div class="products-grid">
+            <article class="product-card">
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Idli_%26_Vada.jpg"
+                alt="Idli served on plate"
+                loading="lazy"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://commons.wikimedia.org/wiki/Special:FilePath/Idli_Sambar.JPG';
+                "
+              />
+              <div class="product-content">
+                <h3>Idli Batter</h3>
+                <p>
+                  Soft, fermented, and ready-to-cook batter for fluffy idlis.
+                  Perfect for healthy breakfast and tiffin.
+                </p>
+              </div>
+            </article>
+            <article class="product-card">
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Masala_dosa_01.jpg"
+                alt="Crispy dosa with chutney"
+                loading="lazy"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://commons.wikimedia.org/wiki/Special:FilePath/Masala_dosa_1.jpg';
+                "
+              />
+              <div class="product-content">
+                <h3>Dosa Batter</h3>
+                <p>
+                  Smooth and balanced batter for crispy, golden dosas. Great
+                  taste with easy cooking at home or in shops.
+                </p>
+              </div>
+            </article>
+            <article class="product-card">
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Medu_Vadas.JPG"
+                alt="Fresh medu vada made from urad batter"
+                loading="lazy"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://commons.wikimedia.org/wiki/Special:FilePath/Uzhunnu_Vada_(%E0%B4%89%E0%B4%B4%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B5%8D_%E0%B4%B5%E0%B4%9F).jpg';
+                "
+              />
+              <div class="product-content">
+                <h3>Vada Batter</h3>
+                <p>
+                  Freshly ground urad batter for crispy and soft vadas. Ideal
+                  for tea-time snacks and events.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="why-choose-us" class="section">
+        <div class="container">
+          <h2>Why Choose Us</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <h3>Fresh Daily</h3>
+              <p>
+                Prepared every day to maintain freshness, taste, and quality.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>Hygienic Preparation</h3>
+              <p>
+                Made in a clean environment with strict attention to food
+                safety.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>Trusted by Local Stores</h3>
+              <p>
+                Many nearby shopkeepers rely on us for regular batter supply.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>Affordable Pricing</h3>
+              <p>
+                Fair rates for families and wholesale-friendly pricing for
+                stores.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-alt">
+        <div class="container two-col">
+          <div>
+            <h2>Contact Us</h2>
+            <p class="section-intro">
+              Reach us directly for daily orders, store supply, and delivery
+              inquiries.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <strong>Phone:</strong>
+                <a href="tel:+919898856557">+91 98988 56557</a>
+              </li>
+              <li>
+                <strong>WhatsApp 1:</strong>
+                <a
+                  class="whatsapp-link"
+                  href="https://wa.me/918013042517"
+                  target="_blank"
+                  rel="noopener"
+                  >Chat on WhatsApp (8013042517)</a
+                >
+              </li>
+              <li>
+                <strong>WhatsApp 2:</strong>
+                <a
+                  class="whatsapp-link"
+                  href="https://wa.me/919898856557"
+                  target="_blank"
+                  rel="noopener"
+                  >Chat on WhatsApp (9898856557)</a
+                >
+              </li>
+              <li>
+                <strong>Location:</strong> Valsad, Gujarat, India (Local
+                Delivery Area)
+              </li>
+              <li>
+                <strong>Home Address Visit:</strong> If you want to buy idli
+                batter and come to our home address, feel free to contact us on
+                the given contact numbers.
+              </li>
+            </ul>
+          </div>
+          <form id="contactForm" class="form-card" novalidate>
+            <h3>Quick Contact Form</h3>
+            <label for="contactName">Name</label>
+            <input
+              id="contactName"
+              name="name"
+              type="text"
+              placeholder="Your name"
+              required
+            />
+            <label for="contactPhone">Phone</label>
+            <input
+              id="contactPhone"
+              name="phone"
+              type="tel"
+              placeholder="10-digit phone number"
+              required
+            />
+            <label for="contactMessage">Message</label>
+            <textarea
+              id="contactMessage"
+              name="message"
+              rows="4"
+              placeholder="Your message"
+              required
+            ></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-status" id="contactStatus"></p>
+          </form>
+        </div>
+      </section>
+
+      <section id="order" class="section">
+        <div class="container">
+          <h2>Place an Order</h2>
+          <p class="section-intro">
+            Fill this form to place your order.
+            <strong
+              >After ordering, please confirm your order by calling</strong
+            >
+            <a href="tel:+919898856557"><strong>9898856557</strong></a> and tell
+            us what you ordered (product + quantity).
+          </p>
+          <p class="section-intro">
+            <strong>Important:</strong> Regular price is
+            <strong>Rs. 50 per 1 kg</strong>. For marriage or other big event
+            orders, please order at least <strong>1 week in advance</strong>.
+            For larger quantity orders, khiru price may vary. Please contact us
+            on WhatsApp for large orders. Home delivery is applicable only if
+            your khiru order is above <strong>10 kg</strong>. Please confirm
+            your details by WhatsApp or phone call.
+          </p>
+          <form id="orderForm" class="form-card order-form" novalidate>
+            <div class="form-grid">
+              <div>
+                <label for="orderName">Name</label
+                ><input
+                  id="orderName"
+                  name="name"
+                  type="text"
+                  placeholder="Your full name"
+                  required
+                />
+              </div>
+              <div>
+                <label for="orderPhone">Phone</label
+                ><input
+                  id="orderPhone"
+                  name="phone"
+                  type="tel"
+                  placeholder="10-digit phone number"
+                  required
+                />
+              </div>
+              <div>
+                <label for="orderProduct">Product</label>
+                <select id="orderProduct" name="product" required>
+                  <option value="">Select product</option>
+                  <option value="Idli Batter">Idli Batter</option>
+                  <option value="Dosa Batter">Dosa Batter</option>
+                  <option value="Vada Batter">Vada Batter</option>
+                </select>
+              </div>
+              <div>
+                <label for="orderQuantity">Quantity (kg)</label
+                ><input
+                  id="orderQuantity"
+                  name="quantity"
+                  type="number"
+                  min="1"
+                  step="1"
+                  placeholder="e.g. 2"
+                  required
+                />
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Order</button>
+            <p class="form-status" id="orderStatus"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>
+          © 2026 Khiru Foods. Fresh homemade batter for your family and
+          business.
+        </p>
+        <div class="social-links">
+          <a href="https://wa.me/919898856557" target="_blank" rel="noopener"
+            >WhatsApp</a
+          >
+          <a href="#" aria-label="Instagram profile">Instagram</a>
+          <a href="#" aria-label="Facebook page">Facebook</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+  </body>
 </html>
