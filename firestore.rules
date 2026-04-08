@@ -1,7 +1,41 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Default deny. Open specific collections when your app needs them.
+    // Allow only public form submissions from website.
+    // No public reads/updates/deletes.
+    match /contacts/{docId} {
+      allow create: if
+        request.resource.data.keys().hasOnly(["name", "phone", "message", "createdAt"]) &&
+        request.resource.data.name is string &&
+        request.resource.data.name.size() >= 2 &&
+        request.resource.data.name.size() <= 80 &&
+        request.resource.data.phone is string &&
+        request.resource.data.phone.matches('^[6-9][0-9]{9}$') &&
+        request.resource.data.message is string &&
+        request.resource.data.message.size() >= 3 &&
+        request.resource.data.message.size() <= 1000 &&
+        request.resource.data.createdAt is timestamp;
+      allow read, update, delete: if false;
+    }
+
+    match /orders/{docId} {
+      allow create: if
+        request.resource.data.keys().hasOnly(["name", "phone", "product", "quantity", "createdAt"]) &&
+        request.resource.data.name is string &&
+        request.resource.data.name.size() >= 2 &&
+        request.resource.data.name.size() <= 80 &&
+        request.resource.data.phone is string &&
+        request.resource.data.phone.matches('^[6-9][0-9]{9}$') &&
+        request.resource.data.product is string &&
+        request.resource.data.product in ["Idli Batter", "Dosa Batter", "Vada Batter"] &&
+        request.resource.data.quantity is int &&
+        request.resource.data.quantity > 0 &&
+        request.resource.data.quantity <= 500 &&
+        request.resource.data.createdAt is timestamp;
+      allow read, update, delete: if false;
+    }
+
+    // Block all other collections by default.
     match /{document=**} {
       allow read, write: if false;
     }
