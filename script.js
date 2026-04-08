@@ -1,12 +1,9 @@
+import { saveContact, saveOrder } from "./firebase-init.js";
+
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 const contactForm = document.getElementById("contactForm");
 const orderForm = document.getElementById("orderForm");
-
-// Optional Firebase config availability check for easy integration.
-if (window.KHIRU_FIREBASE_CONFIG && window.KHIRU_FIREBASE_CONFIG.projectId !== "YOUR_PROJECT_ID") {
-  console.log("Firebase config detected for project:", window.KHIRU_FIREBASE_CONFIG.projectId);
-}
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("show");
@@ -23,7 +20,7 @@ function isValidPhone(phone) {
   return /^[6-9]\d{9}$/.test(phone.trim());
 }
 
-contactForm.addEventListener("submit", (event) => {
+contactForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const name = document.getElementById("contactName").value.trim();
   const phone = document.getElementById("contactPhone").value.trim();
@@ -42,12 +39,19 @@ contactForm.addEventListener("submit", (event) => {
     return;
   }
 
-  status.textContent = "Thank you! We will contact you soon.";
-  status.style.color = "#2e7d32";
-  contactForm.reset();
+  try {
+    await saveContact({ name, phone, message });
+    status.textContent = "Thank you! Your message is saved. We will contact you soon.";
+    status.style.color = "#2e7d32";
+    contactForm.reset();
+  } catch (error) {
+    console.error(error);
+    status.textContent = "Could not save your message. Please try again.";
+    status.style.color = "#d32f2f";
+  }
 });
 
-orderForm.addEventListener("submit", (event) => {
+orderForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const name = document.getElementById("orderName").value.trim();
   const phone = document.getElementById("orderPhone").value.trim();
@@ -73,7 +77,19 @@ orderForm.addEventListener("submit", (event) => {
     return;
   }
 
-  status.textContent = `Order received for ${product}. We will call you shortly.`;
-  status.style.color = "#2e7d32";
-  orderForm.reset();
+  try {
+    await saveOrder({
+      name,
+      phone,
+      product,
+      quantity: Number(quantity)
+    });
+    status.textContent = `Order saved for ${product}. We will call you shortly.`;
+    status.style.color = "#2e7d32";
+    orderForm.reset();
+  } catch (error) {
+    console.error(error);
+    status.textContent = "Could not save your order. Please try again.";
+    status.style.color = "#d32f2f";
+  }
 });

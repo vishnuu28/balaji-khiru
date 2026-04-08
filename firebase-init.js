@@ -1,5 +1,11 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-analytics.js";
+import {
+  getFirestore,
+  addDoc,
+  collection,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 
 // Firebase configuration for Khiru Foods.
 const firebaseConfig = {
@@ -14,7 +20,20 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+const db = getFirestore(app);
 
-// Expose app for future integrations (Firestore/Auth/etc.).
-window.khiruFirebaseApp = app;
-window.khiruFirebaseAnalytics = analytics;
+export async function saveContact(data) {
+  return addDoc(collection(db, "contacts"), {
+    ...data,
+    createdAt: serverTimestamp()
+  });
+}
+
+export async function saveOrder(data) {
+  return addDoc(collection(db, "orders"), {
+    ...data,
+    createdAt: serverTimestamp()
+  });
+}
+
+export { app, analytics, db };
